@@ -45,7 +45,6 @@ public class SettingActivity extends AppCompatActivity {
         appListView.setAdapter(adapter);
         appListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
-        // Pre-check approved apps
         for (int i = 0; i < installedApps.size(); i++) {
             if (approvedApps.contains(installedApps.get(i).packageName)) {
                 appListView.setItemChecked(i, true);
