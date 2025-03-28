@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("KidLauncherPrefs", MODE_PRIVATE);
         Set<String> savedApps = prefs.getStringSet("approved_apps", new HashSet<>());
 
-        approvedApps.addAll(savedApps);  // Load user-approved apps
+        approvedApps.addAll(savedApps); 
     }
 
 
@@ -140,11 +140,11 @@ public class MainActivity extends AppCompatActivity {
     private void checkForFirstTimePinSetup() {
         String savedPin = sharedPreferences.getString(PREF_PIN, "");
         if (savedPin.isEmpty()) {
-            showPinDialog(true); // Force user to set a PIN if it's not set
+            showPinDialog(true);
         }
     }
 
     public void openPinUpdateDialog(View view) {
-        showPinDialog(true); // User can update PIN anytime
+        showPinDialog(true);
     }
 }
